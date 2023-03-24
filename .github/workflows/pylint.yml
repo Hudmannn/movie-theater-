@@ -1,0 +1,71 @@
+# Movie Theater Simulation Program
+
+# Personalized greeting with banter
+print("Welcome to the Movie Theater!")
+customer_name = input("May I have your name please? ")
+print(f"Hi {customer_name}! Are you excited for the movies today?")
+
+# Movie selection
+print("Please select a movie from the following options:")
+print("1. The Last Resort - A thriller about a group of friends on vacation who stumble upon a deadly secret ($12.99)")
+print("2. Superheroes Unleashed - An action-packed adventure featuring your favorite superheroes ($14.99)")
+print("3. Love in the City - A romantic comedy set in New York City ($10.99)")
+print("4. Jurassic Island - A dinosaur-themed adventure on a mysterious island ($16.99)")
+print("5. La Dolce Vita - An Italian classic about a journalist's search for happiness ($8.99)")
+
+# Error handling and movie selection confirmation
+movie_selected = False
+while not movie_selected:
+    try:
+        movie_choice = int(input("Enter the number of your selected movie: "))
+        if movie_choice < 1 or movie_choice > 5:
+            print("Invalid selection. Please choose a number between 1 and 5.")
+        else:
+            movie_selected = True
+    except ValueError:
+        print("Invalid selection. Please choose a number between 1 and 5.")
+selected_movie_price = 0
+if movie_choice == 1:
+    selected_movie_price = 12.99
+    selected_movie_title = "The Last Resort"
+elif movie_choice == 2:
+    selected_movie_price = 14.99
+    selected_movie_title = "Superheroes Unleashed"
+elif movie_choice == 3:
+    selected_movie_price = 10.99
+    selected_movie_title = "Love in the City"
+elif movie_choice == 4:
+    selected_movie_price = 16.99
+    selected_movie_title = "Jurassic Island"
+else:
+    selected_movie_price = 8.99
+    selected_movie_title = "La Dolce Vita"
+print(f"Great choice! You have selected {selected_movie_title} for ${selected_movie_price:.2f}.")
+
+# Snacks selection
+print("Please select a snack from the following options:")
+print("1. Popcorn - Freshly popped popcorn with butter and salt ($5.99)")
+print("2. Nachos - Tortilla chips with melted cheese, jalapenos, and salsa ($7.99)")
+print("3. Chocolate Bar - A sweet treat for your movie experience ($3.99)")
+print("4. Candy - A classic movie theater snack with a variety of flavors ($4.99)")
+
+# Error handling and snacks selection confirmation
+snack_selected = False
+while not snack_selected:
+    try:
+        snack_choice = int(input("Enter the number of your selected snack: "))
+        if snack_choice < 1 or snack_choice > 4:
+            print("Invalid selection. Please choose a number between 1 and 4.")
+        else:
+            snack_selected = True
+    except ValueError:
+        print("Invalid selection. Please choose a number between 1 and 4.")
+selected_snack_price = 0
+if snack_choice == 1:
+    selected_snack_price = 5.99
+    selected_snack = "Popcorn"
+elif snack_choice == 2:
+    selected_snack_price = 7.99
+    selected_snack = "Nachos"
+elif snack_choice == 3:
+    selected_snack_price = 
